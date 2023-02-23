@@ -12,12 +12,14 @@ public class Player : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
 
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
     {
         moveSpeed = 1f;
-        jumpForce = 10f;
+        jumpForce = 20f;
         isJumping = false;
         rb2D = gameObject.GetComponent<Rigidbody2D>();
 
@@ -26,9 +28,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("speed", Mathf.Abs(moveHorizontal));
+        
+
+
+
 
 
     }
@@ -39,13 +47,17 @@ public class Player : MonoBehaviour
 
         if (moveHorizontal > 0.1f || moveHorizontal < -0.1f)
         {
+
             rb2D.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f),ForceMode2D.Impulse);
+            
         }
 
         if (!isJumping && moveVertical > 0.1f)
         {
+
             rb2D.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
         }
+
 
     }
     
@@ -54,7 +66,10 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "CollidePlatform")
         {
+            
+            animator.SetBool("jumping", false);
             isJumping = false;
+            
 
         }
 
@@ -63,9 +78,13 @@ public class Player : MonoBehaviour
     void OnTriggerExit2D(Collider2D collision)
     {
 
+
+
         if (collision.gameObject.tag == "CollidePlatform")
         {
+            animator.SetBool("jumping", true);
             isJumping = true;
+           
 
         }
 
