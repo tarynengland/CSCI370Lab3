@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Border Temp_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 909.3334
+        width: 656.3333
+        height: 454.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d89bd7d637df4a429350b5e3daa80e0
+      internalID: -1920816058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border Temp_1
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 909.3334
+        width: 656.3333
+        height: 454.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f8ad02d075bd5438b285a2183f5f6c
+      internalID: -1595793968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border Temp_2
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 909.3334
+        width: 656.3333
+        height: 454.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4081a5de381034090dc5ec570871cd
+      internalID: -2097608148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border Temp_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 455.33334
+        width: 656.3333
+        height: 454.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c1737f1f662c147b21f86f3d95758c
+      internalID: -1132050390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border Temp_4
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 455.33334
+        width: 656.3333
+        height: 454.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7e95574b8cc7d4aa4fa6ad1eb48a00
+      internalID: -1284709363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border Temp_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.3333435
+        width: 656.3333
+        height: 454.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1277ff79c9c36e947b151886dfa46356
+      internalID: 1311103167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border Temp_6
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 1.3333435
+        width: 656.3333
+        height: 454.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee5d78f777051b4cbe1b60070c8143d
+      internalID: -1662792815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Border Temp_7
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 1.3333435
+        width: 656.3333
+        height: 454.66666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a7f01af9a759f459a2d053c1e7663e
+      internalID: -1658476302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +294,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Border Temp_3: -1132050390
+      Border Temp_4: -1284709363
+      Border Temp_5: 1311103167
+      Border Temp_7: -1658476302
+      Border Temp_0: -1920816058
+      Border Temp_2: -2097608148
+      Border Temp_1: -1595793968
+      Border Temp_6: -1662792815
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
