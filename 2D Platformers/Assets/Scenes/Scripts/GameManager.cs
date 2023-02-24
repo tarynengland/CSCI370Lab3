@@ -11,10 +11,12 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance {get; private set;}
     public GameObject Samplescene;
-    public GameObject curtain;
-    private bool raiseLower = false;
     public GameObject canvas;
     public GameObject eventSystem;
+    public GameObject dialogBox;
+    public GameObject startbutton;
+    public GameObject howtobutton;
+    public GameObject creditbutton;
 
 
     void Awake(){
@@ -22,56 +24,39 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(canvas);
-            DontDestroyOnLoad(eventSystem);
+           // DontDestroyOnLoad(eventSystem);
         } else {
             Destroy(gameObject);
         }
     }
 
-    IEnumerator ColorLerp(bool fadeouts, float duration){
-        float time = 0;
-        raiseLower = true;
-        Image curtainImg = curtain.GetComponent<Image>();
-        Color startValue;
-        Color endValue;
-        if (fadeouts) {
-            startValue = new Color(0,0,0,0);
-            endValue = new Color(0,0,0,1);
-        } else {
-            startValue = new Color(0,0,0,1);
-            endValue = new Color(0,0,0,0);
-        }
-        while (time < duration){
-            curtainImg.color = Color.Lerp(startValue,endValue, time/duration);
-            time += Time.deltaTime;
-            yield return null;
-        }
-        curtainImg.color = endValue;
-        raiseLower = false;
-    }
-
     IEnumerator LoadAsyncScene(string scene){
-        StartCoroutine(ColorLerp(true, 1));
-        while (raiseLower){
-            yield return null;
-        }
         AsyncOperation asyncload = SceneManager.LoadSceneAsync(scene);
         while (!asyncload.isDone){
             yield return null;
         }
-        StartCoroutine(ColorLerp(false, 1));
+    }
+
+    void clearcanvas(){
+        dialogBox.SetActive(false);
+        startbutton.SetActive(false);
+        howtobutton.SetActive(false);
+        creditbutton.SetActive(false);
     }
 
     public void StartGame(){
+        clearcanvas();
         StartCoroutine(LoadAsyncScene("main"));
         Samplescene.SetActive(false);
     }
 
     public void HowToPlay(){
+        clearcanvas();
         StartCoroutine(LoadAsyncScene("howtoplay"));
         Samplescene.SetActive(false);
     }
     public void Credits(){
+        clearcanvas();
         StartCoroutine(LoadAsyncScene("credit"));
         Samplescene.SetActive(false);
     }
