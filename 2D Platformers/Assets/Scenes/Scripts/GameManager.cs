@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
 
     public static GameManager Instance {get; private set;}
-    public GameObject Samplescene;
+    public GameObject scenes;
     public GameObject canvas;
     public GameObject eventSystem;
     public GameObject dialogBox;
@@ -37,7 +37,13 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
+    void showcanvas(){
+        dialogBox.SetActive(true);
+        startbutton.SetActive(true);
+        howtobutton.SetActive(true);
+        creditbutton.SetActive(true);
 
+    }
     void clearcanvas(){
         dialogBox.SetActive(false);
         startbutton.SetActive(false);
@@ -49,25 +55,27 @@ public class GameManager : MonoBehaviour
     public void StartGame(){
         clearcanvas();
         StartCoroutine(LoadAsyncScene("main"));
-        Samplescene.SetActive(false);
+        scenes.SetActive(false);
     }
 
     public void HowToPlay(){
         clearcanvas();
         menubutton.SetActive(true);
         StartCoroutine(LoadAsyncScene("howtoplay"));
-        Samplescene.SetActive(false);
+        scenes.SetActive(false);
     }
 
     public void Credits(){
         clearcanvas();
         menubutton.SetActive(true);
         StartCoroutine(LoadAsyncScene("credit"));
-        Samplescene.SetActive(false);
+        scenes.SetActive(false);
     }
 
-    public void mainmenu(){
+    public void creditmenu(){
         StartCoroutine(LoadAsyncScene("SampleScene"));
+        scenes.SetActive(false);
+        showcanvas();
         
     }
     // Start is called before the first frame update
