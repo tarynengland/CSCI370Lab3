@@ -12,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - title page
   - 
   - 
   - 
@@ -47,4 +47,10 @@ TagManager:
     locked: 0
   - name: characters
     uniqueID: 2194163639
+    locked: 0
+  - name: New Layer 3
+    uniqueID: 3148393423
+    locked: 0
+  - name: New Layer 4
+    uniqueID: 4182029657
     locked: 0
