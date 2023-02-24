@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public GameObject startbutton;
     public GameObject howtobutton;
     public GameObject creditbutton;
+    public GameObject menubutton;
 
 
     void Awake(){
@@ -42,6 +43,7 @@ public class GameManager : MonoBehaviour
         startbutton.SetActive(false);
         howtobutton.SetActive(false);
         creditbutton.SetActive(false);
+
     }
 
     public void StartGame(){
@@ -52,15 +54,22 @@ public class GameManager : MonoBehaviour
 
     public void HowToPlay(){
         clearcanvas();
+        menubutton.SetActive(true);
         StartCoroutine(LoadAsyncScene("howtoplay"));
         Samplescene.SetActive(false);
     }
+
     public void Credits(){
         clearcanvas();
+        menubutton.SetActive(true);
         StartCoroutine(LoadAsyncScene("credit"));
         Samplescene.SetActive(false);
     }
 
+    public void mainmenu(){
+        StartCoroutine(LoadAsyncScene("SampleScene"));
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
