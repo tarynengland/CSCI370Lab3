@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject creditbutton;
     public GameObject menubutton;
     public GameObject resetbutton;
+    public GameObject rules;
 
 
     void Awake(){
@@ -45,6 +46,7 @@ public class GameManager : MonoBehaviour
         creditbutton.SetActive(true);
         menubutton.SetActive(false);
         resetbutton.SetActive(false);
+        rules.SetActive(false);
 
     }
     void clearcanvas(){
@@ -65,6 +67,7 @@ public class GameManager : MonoBehaviour
     public void HowToPlay(){
         clearcanvas();
         menubutton.SetActive(true);
+        rules.SetActive(true);
         StartCoroutine(LoadAsyncScene("howtoplay"));
         scenes.SetActive(false);
     }
