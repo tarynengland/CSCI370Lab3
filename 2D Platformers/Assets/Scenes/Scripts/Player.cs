@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
 
     
+    // values for player movement
 
     private Rigidbody2D rb2D;
     private float moveSpeed;
@@ -14,14 +15,16 @@ public class Player : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
 
+    // animator allows animations
     public Animator animator;
 
+    //bool allowing for direction change
     [HideInInspector]
     public bool facingRight;
 
 
-
-    // Start is called before the first frame update
+    // makes sure the player is facing right at the start and assigns values for move speed/ bool for jumping
+    //bool for jumping makes sure the player cant fly by holding w or up arrow
     void Start()
     {
 
@@ -33,7 +36,7 @@ public class Player : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // collects information on player movement
     void Update()
     {
         
@@ -45,7 +48,8 @@ public class Player : MonoBehaviour
 
     }
 
-    
+    //fixed update that allows player to move/jump
+    // also allows the player to change character direction
     void FixedUpdate()
     {
 
@@ -79,7 +83,7 @@ public class Player : MonoBehaviour
 
 
     }
-    
+    // makes sure the player can only jump when on the ground
     void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -94,6 +98,7 @@ public class Player : MonoBehaviour
 
     }
 
+    //makes sure the player can jump when on the ground
     void OnTriggerExit2D(Collider2D collision)
     {
 

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-
+    // speed in which the camera moves
     public float FollowSpeed = 2f;
     public Transform target;
-  
+  // every update makes sure that the camera follows the position of the player
     void Update()
     {
 

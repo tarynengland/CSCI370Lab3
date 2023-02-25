@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
+    //assignable points based on each item
     public int points;
 
-
+    // allows food to rotate
     [SerializeField] private Vector3 _rotation;
 
-
+    // increases points based on how much the object is worth
     public void OnTriggerEnter2D(Collider2D collider2D)
     {
         print("Entered..");
@@ -21,7 +22,7 @@ public class Food : MonoBehaviour
     }
 
 
-
+    // rotates food
     void Update()
     {
         transform.Rotate(_rotation * Time.deltaTime);

@@ -29,19 +29,20 @@ public class signs : MonoBehaviour
             DialogueHide();
         }
     }
-
+    // method for showing dialogue, panel and image, and refers to type text which types the text out
     public void DialogueShow(string text)
     {
         dialogueBox.SetActive(true);
         StopAllCoroutines();
         StartCoroutine(TypeText(text));
     }
-
+    // method for hiding the dialogue/ dialogue panel and image
     public void DialogueHide()
     {
         dialogueBox.SetActive(false);
     }
 
+    // types the text character by character
     IEnumerator TypeText(string text)
     {
         dialogueText.text = "";

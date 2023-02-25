@@ -17,14 +17,14 @@ public class FoodCounter : MonoBehaviour
     {
         instance = this;
     }
+    //initial text for food collection
 
-    // Start is called before the first frame update
     void Start()
     {
         foodText.text = "Food Collected: " + currentFood.ToString();
     }
 
-    // Update is called once per frame
+    // updates text to value of points 
     public void IncreaseFood(int v)
     {
         currentFood += v;
