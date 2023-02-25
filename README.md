@@ -7,5 +7,5 @@ Our asthetics change as the player progresses. It starts with floating plains wi
 Dealing with the positioning of platforms were tedius. The platforms have to be placed so that it requires skill to reach but also so that it isn't nearly impossible to jump to. Dealing with multiple scenes was also tiring and required research to be able to put into practice. Some of the joys were watching everything come together. Seeing the game go from a bland platformer to a game with graphics, animations and dialogue was very enjoyable.
 
 Our games assets are: https://opengameart.org/content/lpc-sign-post, https://henrysoftware.itch.io/pixel-food, https://aamatniekss.itch.io/free-pixelart-tileset-cute-forest, https://helianthus-games.itch.io/axe-warrior
-Dalton Casey: Worked on Game aesthetics, animations, map design, poi, graphics, scripting, dialogue/dialogue manager, bug fixes, background
-Taryn England: Scenes, Game Manager, fonts
+Dalton Casey: Worked on Game aesthetics, animations, map design, poi, graphics, scripting, dialogue/dialogue manager, bug fixes, background, stuff in main scene
+Taryn England: Main menu and credit scenes, Game Manager, fonts
