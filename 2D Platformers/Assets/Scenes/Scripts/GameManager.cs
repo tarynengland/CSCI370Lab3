@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject howtobutton;
     public GameObject creditbutton;
     public GameObject menubutton;
+    public GameObject resetbutton;
 
 
     void Awake(){
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             DontDestroyOnLoad(canvas);
-           // DontDestroyOnLoad(eventSystem);
+           DontDestroyOnLoad(eventSystem);
         } else {
             Destroy(gameObject);
         }
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour
         startbutton.SetActive(true);
         howtobutton.SetActive(true);
         creditbutton.SetActive(true);
+        menubutton.SetActive(false);
+        resetbutton.SetActive(false);
 
     }
     void clearcanvas(){
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(){
         clearcanvas();
+        resetbutton.SetActive(true);
         StartCoroutine(LoadAsyncScene("main"));
         scenes.SetActive(false);
     }
@@ -73,15 +77,15 @@ public class GameManager : MonoBehaviour
     }
 
     public void creditmenu(){
+        showcanvas();
         StartCoroutine(LoadAsyncScene("SampleScene"));
         scenes.SetActive(false);
-        showcanvas();
         
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+        showcanvas();
     }
 
     // Update is called once per frame
