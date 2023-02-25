@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject menubutton;
     public GameObject resetbutton;
     public GameObject rules;
+    public GameObject credittext;
 
 
     void Awake(){
@@ -47,6 +48,7 @@ public class GameManager : MonoBehaviour
         menubutton.SetActive(false);
         resetbutton.SetActive(false);
         rules.SetActive(false);
+        credittext.SetActive(false);
 
     }
     void clearcanvas(){
@@ -75,6 +77,7 @@ public class GameManager : MonoBehaviour
     public void Credits(){
         clearcanvas();
         menubutton.SetActive(true);
+        credittext.SetActive(true);
         StartCoroutine(LoadAsyncScene("credit"));
         scenes.SetActive(false);
     }
